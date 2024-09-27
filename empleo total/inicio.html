@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Llamativo</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<img src="./imagenes/WhatsApp_Image_2024-05-19_at_7.50.52_PM-removebg-preview.png" alt="Logo" class="logo">
+			<div class="user-icons">
+				<button class="btn-lila" onclick="location.href='./mensajes.html'">Chat</button>
+				<button class="btn-lila" onclick="location.href='./notificaciones.html'">Notificaciones</button>
+				<button class="user-icon-btn" onclick="toggleSidebar()">
+					<i class="fa fa-bars user-icon"></i>
+				</button>
+			</div>
+		</div>
+	</header>
+	
+	
+	<<div id="sidebar" class="sidebar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+		<div class="sidebar-content">
+			<img src="https://via.placeholder.com/150" alt="Imagen de Perfil" class="profile-image">
+			<a href="./empleos.html">Empleos</a>
+			<a href="./empresas.html">Empresas</a>
+			<a href="./Inicio_Sesion.html" <button class="btn-inicio-sesion">Iniciar Sesión</button></a>
+		</div>
+	</div>
+	
+	<div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+	
+   	<section class="banner">
+			<div class="content-banner">
+				<p>Encuentra tu proximo empleo</p>
+				<h2>100% Confiable <br />Muchas Categorias</h2>
+			</div>
+		</section>
+    <div class="search-menu">
+        <div class="container">
+            <form action="#" class="search-form">
+                <input type="text" id="search-input" placeholder="Buscar...">
+                <button type="button" onclick="searchJobs()">Buscar</button>
+            </form>
+            <div class="dropdown">
+                <select class="dropdown-select" id="category-select" onclick="toggleDropdown('category-select')">
+                    <option value="" disabled selected>Categoria</option>
+                    <option value="Opción 1">ING sistemas</option>
+                    <option value="Opción 2">Contador</option>
+                    <option value="Opción 3">Tiempo completo</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <select class="dropdown-select" id="subcategory-select" onclick="toggleDropdown('subcategory-select')">
+                    <option value="" disabled selected>Subcategoria</option>
+                    <option value="Subcategoria 1">EJECUTIVOS DE VENTAS</option>
+                    <option value="Subcategoria 2">TELECOMUNICACIONES</option>
+                    <option value="Subcategoria 3">PERSONAL DE LIMPIEZA</option>
+                </select>
+            </div>
+        </div>
+    </div>
+	<section class="container top-categories">
+		<h1 class="heading-1">Mejores Categorías</h1>
+		<div class="container-categories">
+			<div class="card-category category-moca">
+				<p>Ingeniería Sistemas</p>
+				<a href="./empleos.html" class="btn-ver-mas">Ver más</a>
+			</div>
+			<div class="card-category category-expreso">
+				<p>Contaduría</p>
+				<a href="./empleos.html" class="btn-ver-mas">Ver más</a>
+			</div>
+			<div class="card-category category-capuchino">
+				<p>Transporte terrestre</p>
+				<a href="./empleos.htm+" class="btn-ver-mas">Ver más</a>
+			</div>
+		</div>
+	</section>
+	
+    <center><h2>EMPLEOS DESTACADOS </h2></center>
+    <div class="empleos-section" id="empleos-section">
+        <div class="empleos-container" id="empleos-container">
+            <section class="container blogs">
+				<div class="container-blogs">
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="./imagenes/OIP.jfif" alt="Imagen Blog 1" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Contador</h3>
+							<span>29 Noviembre 2022</span>
+							<p>
+								Buscamos un contador con cierta cantiad de experiencia laboral
+
+							</p>
+							<a href="./detalleempleo.html"><div class="btn-read-more">Leer más</div></a>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="./imagenes/ing.jfif" alt="Imagen Blog 2" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Ingeniero en bases de datos</h3>
+							<span>29 Noviembre 2022</span>
+							<p>
+								Se busca alguien con especialisacion en bases de datos
+							</p>
+							<a href="./detalleempleo.html"><div class="btn-read-more">Leer más</div></a>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="./imagenes/R (1).jfif" alt="Imagen Blog 3" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>recogedor de basura</h3>
+							<span>29 Noviembre 2022</span>
+							<p>
+								se busca persona que este dispuesta a recoger basura para la empresa ciudad limpia
+							</p>
+							<a href="./detalleempleo.html"><div class="btn-read-more">Leer más</div></a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a href="#">Contact us</a></li>
+<li><a href="#">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+INFERNO Copyright © 2021 EmpleoTotal rights reserved || Designed By: EempleoTotal
+</div>
+</div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

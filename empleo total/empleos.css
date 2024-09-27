@@ -1,0 +1,184 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #000000 0%, #510cd0 100%);
+    padding: 1rem 1rem; /* Incrementa el padding para hacer el header más grande */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px; /* Define una altura fija para el header */
+}
+.container-blogs {
+    margin-top: 150px; /* Espacio adicional para separarlo del header */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 1.5rem;
+}
+
+h1 {
+    flex-grow: 1;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.search-container {
+    flex-grow: 2;
+    margin: 0 2rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-btn {
+    background-color: #ff66cc;
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #ff33aa;
+    transform: translateY(-2px);
+}
+
+.nav-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 102, 204, 0.5);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Asegura que el contenido comience después del header */
+body {
+    padding-top: 120px; /* Añade suficiente espacio para el header */
+}
+
+
+.search-container {
+    margin-top: 15px;
+}
+
+#search-input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    width: 60%;
+    max-width: 500px;
+    font-size: 16px;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.job-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.location {
+    font-size: 16px;
+    color: #7100d3;
+    background-color: #e6f0fa;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.company-name {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.job-description {
+    font-size: 16px;
+    color: #444;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #7600e4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3e0096;
+}

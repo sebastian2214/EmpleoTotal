@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #000000 0%, #510cd0 100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    top: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    height: 80px; /* Altura del header */
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Espaciado interno del header */
+}
+
+/* Container in Header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+h2{
+    text-align: center;
+}
+/* Navigation Buttons */
+.nav-buttons button {
+    background-color: #ff66cc;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons button:hover {
+    background-color: #ff33aa;
+    transform: translateY(-2px);
+}
+
+.nav-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 102, 204, 0.5);
+}
+
+.nav-buttons button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* User Icons */
+.user-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Main Content Styles */
+.main {
+    padding: 20px;
+    padding-top: 100px; /* Espacio para el header fijo */
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Notifications Styles */
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notification {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification h3 {
+    margin: 0 0 10px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

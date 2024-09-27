@@ -1,0 +1,400 @@
+/* ===== =====  Poppins Google Font  ===== =====  */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 100px; 
+}
+
+header {
+  background: linear-gradient(90deg, #000000 0%, #510cd0 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  top: 0;
+  width: 100%;
+  position: absolute; 
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.user-icons {
+  display: flex;
+  gap: 10px;
+  align-items: left;
+}
+
+.user-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-lila {
+  background-color: #ff66cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+}
+
+.btn-lila:hover {
+  background-color: #ff33aa;
+  transform: translateY(-2px);
+}
+
+.btn-lila:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 102, 204, 0.5);
+}
+
+.btn-lila:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Contenedor del botón */
+.button-container {
+  position: relative; 
+  height: 100px; /
+}
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "userProfile userDetails"
+    "work_skills timeline_about"
+    "work_skills timeline_about";
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  padding: 1.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+  margin-top: 2.5rem;
+}
+
+header {
+  grid-area: header;
+}
+
+.userProfile {
+  grid-area: userProfile;
+}
+
+.work_skills {
+  grid-area: work_skills;
+}
+
+.userDetails {
+  grid-area: userDetails;
+}
+
+.timeline_about {
+  grid-area: timeline_about;
+}
+
+
+.container .card {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(3rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+
+.container header {
+  padding: 1rem 2.5rem;
+}
+
+.container header .brandLogo {
+  display: flex;
+  align-items: center;
+}
+
+.container header .brandLogo figure img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.container header .brandLogo span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+/* ===== =====>>  User Main-Profile Css Start  <<===== ===== */
+.container .userProfile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.container .userProfile .profile figure img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+}
+
+/* ===== =====>>  Work & Skills Css Start  <<===== ===== */
+.container .work_skills {
+  padding: 1.5rem;
+}
+
+.work_skills .work .heading,
+.work_skills .skills .heading {
+  position: relative;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.work_skills .work .heading::before,
+.work_skills .skills .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0.1rem;
+  width: 88%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.work_skills .work .primary,
+.work_skills .work .secondary {
+  position: relative;
+}
+
+.work_skills .work .primary h1,
+.work_skills .work .secondary h1 {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.6rem;
+}
+
+.work_skills .work .primary span,
+.work_skills .work .secondary span {
+  position: absolute;
+  top: 23px;
+  right: 2px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgba(138, 6, 226, 0.8);
+  background: #0b1724;
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.work_skills .work .primary p,
+.work_skills .work .secondary p {
+  margin-bottom: 1.8rem;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6rem;
+}
+
+/* ===== =====>>  User Details Css Start  <<===== ===== */
+.userDetails {
+  position: relative;
+  padding: 1.5rem 2.5rem;
+}
+
+.userDetails .userName h1 {
+  font-size: 2.2rem;
+}
+
+.userDetails .userName .map {
+  position: absolute;
+  top: 2.5rem;
+  left: 18.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDetails .userName .map .ri {
+  margin-right: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.userDetails .userName .map span {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+
+.userDetails .userName p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(138, 6, 226, 0.8);
+  margin-bottom: 1.8rem;
+}
+
+.userDetails .rank {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.userDetails .rank .heading {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.userDetails .rank span {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.userDetails .rank .rating {
+  position: absolute;
+  top: 2.7rem;
+  left: 3.5rem;
+}
+
+.userDetails .rank .rating .rate {
+  color: rgba(138, 6, 226, 0.8);
+  font-size: 1.4rem;
+}
+
+.userDetails .rank .rating .underrate {
+  color: rgba(132, 0, 248, 0.6);
+}
+
+.userDetails .btns ul,
+.userDetails .btns ul li {
+  display: flex;
+  align-items: center;
+}
+
+.userDetails .btns ul li {
+  margin-right: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.userDetails .btns ul li .ri {
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.userDetails .btns ul li a {
+  font-size: 1.4rem;
+  color: #7300ff;
+  font-weight: 500;
+}
+
+.userDetails .btns ul .active {
+  background: #f9f9f9;
+  padding: 0.5rem 1.5rem;
+}
+
+.userDetails .btns ul .active a,
+.userDetails .btns ul .active .ri {
+  color: rgba(138, 6, 226, 0.8);
+}
+
+/* ===== =====>>  Timeline & About Css Start  <<===== ===== */
+.timeline_about {
+  padding: 2.5rem;
+}
+
+.timeline_about .tabs ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.timeline_about .tabs ul::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.timeline_about .tabs ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 2.5rem;
+  padding-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.timeline_about .tabs ul li span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.timeline_about .tabs ul li .ri {
+  margin-right: 0.5rem;
+}
+
+.timeline_about .tabs ul .active::before {
+  content: "";
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0;
+  height: 0.1rem;
+  width: 100%;
+  background: rgba(138, 6, 226, 0.8);
+}
