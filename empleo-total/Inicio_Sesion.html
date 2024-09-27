@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Inicio Sesión</title>
+    <link rel="stylesheet" href="Inicio_Sesion.css">
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="imagenes/logoTotal.png" alt="Logo de la empresa">
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h1>Iniciar Sesión</h1>
+            <form action="./inicio.html" method="post">
+                <article class="campo">
+                    <input type="text" id="usuario" required>
+                    <label for="usuario">Usuario</label>
+                </article>
+                <article class="campo">
+                    <input type="password" id="contraseña" required>
+                    <label for="contraseña">Contraseña</label>
+                </article>
+                <!---<article class="recordar">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </article>---->
+                <article class="btn">
+                    <input type="submit" value="Iniciar Sesión">
+                </article>
+                <article class="registrar">
+                    <a href="EscogerRegistro.html">Registrarse</a>
+                </article>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

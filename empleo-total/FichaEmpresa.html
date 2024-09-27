@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Técnica</title>
+    <link rel="stylesheet" href="FichaEmpresa.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="imagenes/logoTotal.png" alt="Logo de la empresa">
+    </header>
+
+    <main>
+        <section class="hojaVida">
+            <h1>Formulario de Hoja de Vida</h1>
+            <form action="Inicio_Sesion.html" method="post">
+                <!-- Información General de la Empresa -->
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    <article class="campos">
+                        <label for="nombre">Nombre de la Empresa:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="email">Correo Electrónico Corporativo:</label>
+                        <input type="email" id="email" name="email" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="telefono">Teléfono(s) de Contacto:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="sitio">Sitio Web:</label>
+                        <input type="text" id="sitio" name="sitio" required>
+                    </article>
+                </fieldset>
+
+                <!-- Datos Legales -->
+                <fieldset>
+                    <legend>Datos Legales</legend>
+                    <article class="campos">
+                        <label for="fecha">Fecha de Constitución:</label>
+                        <input type="date" id="empresa" name="empresa" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="nit">NIT:</label>
+                        <input type="text" id="nit" name="nit" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="sector">Sector Empresarial:</label>
+                        <textarea id="sector" name="sector" rows="4" required></textarea>
+                    </article>
+                </fieldset>
+
+                <!-- Información Operativa -->
+                <fieldset>
+                    <legend>Información Operativa</legend>
+                    <article class="campos">
+                        <label for="empleados">Número de Empleados:</label>
+                        <input type="number" id="empleados" name="empleados" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="clientes">Principales Clientes o Mercados:</label>
+                        <input type="text" id="clientes" name="clientes" required>
+                    </article>
+
+                    <article class="campos">
+                        <label for="descripcion">Descripción de la Actividad Principal:</label>
+                        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                    </article>
+                </fieldset>
+
+                <!-- Información Adicional -->
+                <fieldset>
+                    <legend>Información Adicional</legend>
+                    <article class="campos">
+                        <label for="historia">Historia y Evolución de la Empresa:</label>
+                        <textarea id="historia" name="historia" rows="4" required></textarea>
+                    </article>
+
+                    <article class="campos">
+                        <label for="vision">Misión y Visión:</label>
+                        <textarea id="vision" name="vision" rows="4" required></textarea>
+                    </article>
+
+                    <article class="campos">
+                        <label for="premios">Premios y Reconocimientos:</label>
+                        <textarea id="premios" name="premios" rows="4" required></textarea>
+                    </article>
+                </fieldset>
+
+                <!-- Botón de Envío -->
+                <article class="btn-envio">
+                    <input type="submit" value="Registrarse">
+                </article>
+            </form>
+        </section>
+    </main>
+    
+
+</body>
+</html>

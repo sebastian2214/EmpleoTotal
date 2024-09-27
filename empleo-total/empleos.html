@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Empleos</title>
+    <link rel="stylesheet" href="./empleos.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="./imagenes/logoTotal.png" alt="Logo" class="logo">
+            <h1>Catálogo de Empleos</h1>
+            <div class="search-container">
+                <input type="text" placeholder="🔍 Buscar empleos..." id="search-input">
+            </div>
+            <nav class="nav-buttons">
+                <a href="./inicio.html" class="nav-btn">Inicio</a>
+                <a href="notificaciones.html" class="nav-btn">Notificaciones</a>
+                <a href="./mensajes.html" class="nav-btn">Chat</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="job-list">
+        <article class="job-card">
+            <div class="job-card-header">
+                <h2>Desarrollador Front-End</h2>
+                <span class="location">bogota_bosa</span>
+            </div>
+            <p class="company-name">Tech Innovators</p>
+            <p class="job-description">Buscamos un desarrollador con experiencia en HTML, CSS y JavaScript para unirse a nuestro equipo.</p>
+            <button id="apply-button">Aplicar</button>
+            <a href="detalleempleo.html">
+                <button>Mostrar mas</button>
+            </a>
+        </article>
+
+        <script>
+            // Seleccionamos el botón por su id
+            document.getElementById('apply-button').addEventListener('click', function() {
+                // Mostramos una alerta cuando se haga clic en el botón
+                alert('Aplicado correctamente');
+            });
+        </script>
+
+        <article class="job-card">
+            <div class="job-card-header">
+                <h2>Especialista en Marketing Digital</h2>
+                <span class="location">medellin, Carpinelo</span>
+            </div>
+            <p class="company-name">Market Leaders</p>
+            <p class="job-description">Únete a nuestro equipo de marketing digital y ayuda a mejorar nuestra presencia online.</p>
+            <button>Aplicar</button>
+            <a href="detalleempleo.html"> <button>Mostrar mas</button></a>
+        </article>
+
+        <article class="job-card">
+            <div class="job-card-header">
+                <h2>Ingeniero de Datos</h2>
+                <span class="location">Valencia, España</span>
+            </div>
+            <p class="company-name">DataCorp</p>
+            <p class="job-description">Estamos buscando un ingeniero de datos con experiencia en grandes volúmenes de datos y análisis.</p>
+            <button>Aplicar</button>
+            <a href="detalleempleo.html"> <button>Mostrar mas</button></a>
+        </article>
+
+        <article class="job-card">
+            <div class="job-card-header">
+                <h2>Diseñador UX/UI</h2>
+                <span class="location">Sevilla, España</span>
+            </div>
+            <p class="company-name">Creative Studio</p>
+            <p class="job-description">Buscamos un diseñador con un enfoque en la experiencia de usuario para proyectos innovadores.</p>
+            <button>Aplicar</button>
+            <a href="detalleempleo.html"> <button>Mostrar mas</button></a>
+        </article>
+
+        <article class="job-card">
+            <div class="job-card-header">
+                <h2>Analista de Negocios</h2>
+                <span class="location">Málaga, España</span>
+            </div>
+            <p class="company-name">Business Solutions</p>
+            <p class="job-description">Analiza y mejora procesos de negocio para incrementar la eficiencia en nuestra empresa.</p>
+            <button>Aplicar</button>
+            <a href="detalleempleo.html"> <button>Mostrar mas</button></a>
+        </article>
+    </section>
+</body>
+
+</html>

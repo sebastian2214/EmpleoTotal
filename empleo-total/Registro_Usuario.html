@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario</title>
+    <link rel="stylesheet" href="Registro_Usuario.css">
+</head>
+<body>
+
+<header>
+    <img class="logo" src="imagenes/logoTotal.png" alt="Logo de la empresa">
+</header>
+
+<main>
+    <section class="formulario">
+        <h1>Registrar Usuario</h1>
+        <form action="HojaVidaUsuario.html" method="post">
+            <article class="usuario">
+                <input type="text" id="nombres" required>
+                <label for="nombres">Nombres Completos</label>
+            </article>
+            <article class="usuario">
+                <input type="text" id="apellidos" required>
+                <label for="apellidos">Apellidos Completos</label>
+            </article>
+            <article class="usuario">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </article>
+            <article class="usuario">
+                <input type="tel" id="telefono" required>
+                <label for="telefono">Teléfono</label>
+            </article>
+            <article class="usuario">
+                <input type="text" id="usuario" required>
+                <label for="usuario">Usuario</label>
+            </article>
+            <article class="usuario">
+                <input type="password" id="contraseña" required>
+                <label for="contraseña">Registrar Contraseña</label>
+            </article>
+            <article class="btn">
+                <input type="submit" value="Siguiente">
+            </article>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>

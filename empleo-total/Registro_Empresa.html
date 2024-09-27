@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Registro Empresa</title>
+    <link rel="stylesheet" href="Registro_Empresa.css">
+</head>
+<body>
+
+<header>
+    <img class="logo" src="imagenes/logoTotal.png" alt="Logo de la empresa">
+</header>
+
+<main>
+    <section class="formulario">
+        <h1>Registrar Empresa</h1>
+        <form action="FichaEmpresa.html" method="post">
+            <article class="usuario">
+                <input type="text" id="nombre-empresa" required>
+                <label for="nombre-empresa">Nombre de la empresa</label>
+            </article>
+            <article class="usuario">
+                <input type="text" id="nit" required>
+                <label for="nit">NIT</label>
+            </article>
+            <article class="usuario">
+                <input type="text" id="direccion" required>
+                <label for="direccion">Dirección de la empresa</label>
+            </article>
+            <article class="usuario">
+                <input type="text" id="telefono" required>
+                <label for="telefono">Teléfono de contacto</label>
+            </article>
+            <article class="usuario">
+                <input type="email" id="correo" required>
+                <label for="correo">Correo electrónico de la empresa</label>
+            </article>
+            <article class="usuario">
+                
+                <input type="password" id="contraseña" required>
+                <label for="contraseña">Registrar Contraseña</label>
+            </article>
+            <article class="btn">
+                <button type="submit">Siguiente</button>
+            </article>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
