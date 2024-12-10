@@ -1,0 +1,374 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('fondo.avif') no-repeat center center fixed;
+    font-size: 15px;
+}
+
+.juan {
+    top: 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    min-height: 80px;
+    background: linear-gradient(
+        90deg,
+        rgb(16, 1, 20) 0%,
+        rgb(192, 170, 253) 90%
+    );
+}
+
+.pepa img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    position: absolute;
+    left: 30px;
+}
+
+.user-icon-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.user-icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #4A148C;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #6A1B9A;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.ojala {
+    align-items: center;
+    background-image: linear-gradient(144deg,#4c077e, #361fcc 50%,#64044f);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+    position: absolute;
+    left: 9%;
+    top: 36px;
+}
+
+.ojala:active,
+.ojala:hover {
+    outline: 0;
+}
+
+.ojala span {
+    background-color: rgb(5, 6, 45);
+    padding: 6px 10px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.ojala:hover span {
+    background: none;
+}
+
+.ojala:active {
+    transform: scale(0.9);
+}
+
+.link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+
+.orejon h1 {
+    font-size: 45px;
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        2px 2px 0px #30075e, 
+        -2px -2px 0px #30075e, 
+        2px -2px 0px #30075e, 
+        -2px 2px 0px #30075e;
+}
+
+.linea {
+    border: none;
+    border-top: 2px solid #000;
+    width: 97%;
+    position: absolute;
+    top: 16%;
+    left: 1%;
+}
+
+.linea-vertical {
+    width: 2px; 
+    height: 50px; 
+    background-color: #000; 
+    position: absolute;
+    top: 11%;
+    left: 25%;
+  }
+
+  .oils {
+    --color: #996acf;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: absolute; /* Cambiado de absolute a relative */
+    top: 9%;
+    left: 26%;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    text-decoration: none; /* Asegúrate de que esta línea esté aquí */
+}
+
+.oils a {
+    text-decoration: none; /* Asegúrate de que esta línea esté aquí también */
+    color: inherit; /* Mantén el color del enlace */
+    display: block; /* Asegúrate de que el enlace ocupe todo el botón */
+    width: 100%;
+    height: 100%;
+    line-height: 2.5em; /* Alinea el texto verticalmente */
+}
+
+.oils:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.oils:hover {
+    color: #000000;
+}
+
+.oils:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.oils:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.oils:active:before {
+    background: #5a3ca7;
+    transition: background 0s;
+}
+  .linea-vertical2 {
+    width: 2px; 
+    height: 50px; 
+    background-color: #000; 
+    position: absolute;
+    top: 11%;
+    left: 36%;
+  } 
+
+  .ali {
+    --color: #6d6b70;
+    font-family: inherit;
+    display: inline-block;
+    width: 9em;
+    height: 2.8em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    top: -70%;
+    right: 230%;
+  }
+  
+  .ali:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  .ali:hover {
+    color: #000000;
+  }
+  
+  .ali:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  .ali:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  .ali:active:before {
+    background: #000000;
+    transition: background 0s;
+  }
+
+  .tabla-estilizada {
+    width: 33%;
+    border-radius: 8px;
+    margin: 20px 10px;
+    font-size: 18px;
+    text-align: left;
+    position: absolute;
+    top: 37%;
+    left: 55%;
+  }
+  
+  .tabla-estilizada th, .tabla-estilizada td {
+    border: 1px solid #ddd;
+    padding: 7px;
+    background-color: #D5DBDB;
+    font-family: 'Arial Black', sans-serif;
+    color: black;
+    border-radius: 4px;
+  }
+  
+  .tabla-estilizada select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Arial Black', sans-serif;
+    color: black;
+    border-radius: 4px;
+  }
+  
+  .tablasl {
+    width: 40%;
+    border-radius: 8px;
+    margin: 20px 10px;
+    font-size: 18px;
+    text-align: left;
+    position: absolute;
+    top: 37%;
+    left: 35%;
+  }
+  
+  .tablasl th, .tablasl td {
+    border: 1px solid #ddd;
+    padding: 7px;
+    background-color: #D5DBDB;
+    font-family: 'Arial Black', sans-serif;
+    color: black;
+    border-radius: 4px;
+  }
+  
+  .tablasl select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Arial Black', sans-serif;
+    color: black;
+    border-radius: 4px;
+  }
+
+  .olo img {
+    position: absolute;
+    top: 3000%;
+    right: 40%;
+    width: 350px;
+    height: 210px;
+    border-radius: 20%;
+    border: 5px solid #9d3dd4;
+  }
+
+  .aish img {
+    position: absolute;
+    top: 3000%;
+    left: 9%;
+    width: 350px;
+    height: 210px;
+    border-radius: 20%;
+    border-color: #4A148C;
+    border: 5px solid #9d3dd4;
+  }
+
+  .oran img {
+    position: absolute;
+    top: 3000%;
+    left: 52%;
+    width: 350px;
+    height: 210px;
+    border-radius: 20%;
+    border: 5px solid #9d3dd4;
+  }

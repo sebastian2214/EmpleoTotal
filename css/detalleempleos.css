@@ -1,0 +1,315 @@
+/* ===== ===== Poppins Google Font ===== ===== */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 100px; 
+}
+
+header {
+  background: linear-gradient(90deg, #000000 0%, #8800ff 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed; /* Cambiado a fixed para que permanezca en la parte superior */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 20px; /* Ajusta el padding según sea necesario */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.user-icons {
+  display: flex;
+  gap: 10px;
+  align-items: left;
+}
+
+.user-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-lila {
+  background-color: #ff66cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+}
+
+.btn-lila:hover {
+  background-color: #ff33aa;
+  transform: translateY(-2px);
+}
+
+.btn-lila:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 102, 204, 0.5);
+}
+
+.btn-lila:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "userProfile userDetails"
+    "work_skills timeline_about"
+    "work_skills timeline_about";
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  padding: 1.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+  margin-top: 2.5rem;
+  overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+header {
+  grid-area: header;
+}
+
+.userProfile {
+  grid-area: userProfile;
+}
+
+.work_skills {
+  grid-area: work_skills;
+}
+
+.userDetails {
+  grid-area: userDetails;
+}
+
+.timeline_about {
+  grid-area: timeline_about;
+}
+
+.container .card {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(3rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+/* ===== =====>> User Main-Profile Css Start <<===== ===== */
+.container .userProfile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.container .userProfile .profile figure img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
+}
+
+/* ===== =====>> Work & Skills Css Start <<===== ===== */
+.container .work_skills {
+  padding: 1.5rem;
+}
+
+.work_skills .work .heading,
+.work_skills .skills .heading {
+  position: relative;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.work_skills .work .heading::before,
+.work_skills .skills .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0.1rem;
+  width: 88%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.work_skills .work .primary,
+.work_skills .work .secondary {
+  position: relative;
+}
+
+.work_skills .work .primary h1,
+.work_skills .work .secondary h1 {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.6rem;
+}
+
+.work_skills .work .primary span,
+.work_skills .work .secondary span {
+  position: absolute;
+  top: 23px;
+  right: 2px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgba(138, 6, 226, 0.8);
+  background: #0b1724;
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.work_skills .work .primary p,
+.work_skills .work .secondary p {
+  margin-bottom: 1.8rem;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6rem;
+  overflow: hidden; /* Asegura que el texto largo no se salga del contenedor */
+}
+
+/* ===== =====>> User Details Css Start <<===== ===== */
+.userDetails {
+  position: relative;
+  padding: 1.5rem 2.5rem;
+}
+
+.userDetails .userName h1 {
+  font-size: 2.2rem;
+  overflow-wrap: break-word; /* Ajusta el texto largo en múltiples líneas */
+}
+
+.userDetails .userName .map {
+  position: absolute;
+  top: 2.5rem;
+  left: 18.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDetails .userName .map .ri {
+  margin-right: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.userDetails .userName .map span {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+
+.userDetails .userName p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(138, 6, 226, 0.8);
+  margin-bottom: 1.8rem;
+  overflow-wrap: break-word; /* Ajusta el texto largo en múltiples líneas */
+}
+
+.userDetails .rank {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.userDetails .rank .heading {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.userDetails .rank span {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.userDetails .rank .rating {
+  position: absolute;
+  top: 2.7rem;
+  left: 3.5rem;
+}
+
+.userDetails .rank .rating .rate {
+  color: rgba(138, 6, 226, 0.8);
+  font-size: 1.4rem;
+}
+
+.userDetails .rank .rating .underrate {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.4rem;
+}
+.ratings .stars {
+  display: flex;
+  align-items: center;
+}
+
+.ratings .stars i {
+  font-size: 1.5rem;
+  color: #f5c518; /* Color dorado para las estrellas llenas */
+}
+
+.ratings .stars i.filled {
+  color: #f5c518; /* Color dorado para las estrellas llenas */
+}
+
+.ratings .stars i:not(.filled) {
+  color: #e0e0e0; /* Color gris para las estrellas vacías */
+}

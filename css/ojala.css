@@ -1,0 +1,165 @@
+/* Estilo para centrar el formulario de búsqueda */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: linear-gradient(90deg, #000000 0%, #4d07ff 100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    color: #ffffff;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+.search-form {
+    margin: 100px auto 20px auto; /* Centrado en la pantalla */
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo suave */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Sombra sutil */
+    max-width: 600px;
+}
+
+.search-form .input-group {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 100%; /* Ocupa todo el espacio disponible */
+}
+
+.search-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-form button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #0056b3; /* Efecto hover */
+}
+
+/* Estilo para los resultados */
+.table-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #6f42c1;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+/* Estilo para el header */
+header {
+    z-index: 1000;
+}
+
+/* Estilo para el logo */
+header .logo {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Estilo para los botones de usuario */
+header .user-icons .btn {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+header .user-icons .btn:hover {
+    background-color: #5a2c8c;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .search-form {
+        margin: 80px 20px 20px 20px; /* Menos margen para dispositivos móviles */
+    }
+
+    .search-form input, .search-form button {
+        font-size: 1rem; /* Ajuste de tamaño para dispositivos más pequeños */
+        padding: 10px 15px;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem; /* Texto más pequeño para dispositivos móviles */
+    }
+}
+
+

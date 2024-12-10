@@ -1,0 +1,88 @@
+/* General */
+body {
+    background-color: #f8f9fa; /* Fondo claro */
+    font-family: 'Arial', sans-serif;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    border: 1px solid #4d07ff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+h2 {
+    color: #2d1961;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+.form-label {
+    color: #4d07ff;
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #4d07ff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3b05cc;
+    box-shadow: 0 0 5px rgba(77, 7, 255, 0.5);
+}
+
+/* Botón Guardar */
+.btn-primary {
+    background-color: #4d07ff;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3b05cc;
+    box-shadow: 0 4px 8px rgba(59, 5, 204, 0.4);
+}
+
+/* Imagen actual */
+img {
+    border-radius: 5px;
+    border: 2px solid #4d07ff;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+p {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
