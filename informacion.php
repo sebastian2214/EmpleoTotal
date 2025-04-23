@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informacion</title>
+    <title>Información</title>
     <link rel="stylesheet" href="css/sera.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,55 +17,58 @@
 
 <main class="container mt-4 alone">
     <section class="fs-5 fs-md-4 fs-lg-3">
-        <p>En un pequeño pueblo rodeado de montañas, vivía una comunidad 
-        de personas que valoraban la simplicidad y la naturaleza. Cada mañana,
-        el sol se levantaba detrás de las colinas, bañando el valle en una luz 
-        dorada que hacía brillar el rocío en las hojas de los árboles. 
-        Los habitantes del pueblo se despertaban temprano para aprovechar 
-        al máximo el día.</p>
+        <p>
+            Bienvenido a nuestra plataforma, una herramienta diseñada para ayudar a las empresas 
+            a encontrar a los candidatos ideales de manera rápida y eficiente. Con nuestro sistema, 
+            podrás realizar diversas acciones que optimizarán tu proceso de contratación.
+        </p>
 
-        <p>María, una joven apasionada por la jardinería, pasaba sus mañanas cuidando 
-        su jardín. Sus flores eran las más hermosas del pueblo, y su jardín era 
-        un lugar de paz y tranquilidad. Los niños solían jugar cerca, atraídos 
-        por los colores vibrantes y los aromas dulces de las flores. María 
-        siempre tenía una sonrisa para ellos y les enseñaba sobre las 
-        diferentes plantas y cómo cuidarlas.</p>
+        <p>
+            Entre las funcionalidades que ofrecemos, se destacan las siguientes:
+        </p>
+        <ul>
+            <li><strong>Búsqueda de empleados:</strong> Puedes buscar fácilmente candidatos con diferentes 
+            habilidades, experiencia y formación. Nuestro sistema permite filtrar los resultados según tus 
+            necesidades específicas.</li>
+            
+            <li><strong>Publicación de empleos:</strong> Las empresas pueden crear y publicar ofertas de trabajo 
+            directamente en la plataforma, lo que facilita la difusión de oportunidades laborales a un amplio 
+            número de postulantes calificados.</li>
+            
+            <li><strong>Encuestas personalizadas:</strong> Realiza encuestas para conocer la opinión de los 
+            postulantes o empleados actuales sobre temas relevantes. Las encuestas pueden ser una herramienta 
+            útil para obtener retroalimentación sobre el ambiente laboral, expectativas de los empleados, entre otros.</li>
+            
+            <li><strong>Chat en tiempo real:</strong> Ofrecemos una funcionalidad de chat en tiempo real que 
+            permite a las empresas y candidatos comunicarse de manera más directa y rápida. Esto ayuda a aclarar 
+            dudas y agilizar el proceso de selección.</li>
+        </ul>
 
-        <p>En el centro del pueblo, había una plaza donde los vecinos 
-        se reunían para compartir historias y noticias. Don Pedro, el panadero, 
-        era conocido por sus deliciosos panes y su generosidad. Cada tarde, 
-        después de cerrar su panadería, se sentaba en un banco de la plaza y 
-        contaba historias de su juventud. Los niños y adultos se reunían a su 
-        alrededor, fascinados por sus relatos.</p>
+        <p>
+            Todo esto está diseñado para hacer que tu proceso de contratación sea mucho más ágil, 
+            eficiente y organizado. Con nuestra plataforma, las empresas pueden reducir considerablemente 
+            el tiempo dedicado a la búsqueda de empleados adecuados, simplificando el proceso y permitiendo 
+            una conexión más directa con los candidatos.
+        </p>
 
-        <p>Un día, llegó al pueblo un viajero. Era un hombre alto y delgado, 
-        con una barba espesa y ojos brillantes. Llevaba consigo una mochila 
-        llena de libros y un cuaderno donde escribía sus experiencias. 
-        Los habitantes del pueblo lo recibieron con curiosidad y hospitalidad. 
-        El viajero, agradecido, decidió quedarse unos días y compartir 
-        sus conocimientos.</p>
-
-        <p>Durante su estancia, el viajero organizó talleres de 
-        escritura y lectura en la plaza. Enseñó a los niños a escribir 
-        cuentos y a los adultos a leer poesía. La plaza se llenó de 
-        risas y creatividad, y el viajero se convirtió en un amigo 
-        querido por todos. Antes de partir, dejó un libro en la biblioteca 
-        del pueblo, lleno de historias y poemas escritos por los habitantes.</p>
-
-        <p>El viajero continuó su camino, pero su legado perduró en el pueblo. 
-        Los talleres de escritura y lectura se convirtieron en una tradición, 
-        y cada año, los habitantes celebraban un festival literario en su honor. 
-        El pequeño pueblo, rodeado de montañas, se convirtió en un lugar de 
-        inspiración y creatividad, donde la simplicidad y la naturaleza se 
-        entrelazaban con las palabras y las historias.</p>
+        <p>
+            Además, nuestra plataforma te permite gestionar y almacenar toda la información relacionada 
+            con las ofertas de empleo, candidatos y encuestas en un solo lugar, lo que facilita el seguimiento 
+            y la toma de decisiones durante el proceso de contratación.
+        </p>
     </section>
 </main>
 
 <article class="container text-center my-5">
-    <h1 class="fs-2">Quienes somos</h1>
+    <h1 class="fs-2">¿Cómo puede ayudar nuestra plataforma?</h1>
+    <p>
+        Nuestra plataforma está diseñada para mejorar la eficiencia en el proceso de contratación, 
+        permitiéndote encontrar empleados calificados rápidamente, gestionar publicaciones de empleos, 
+        realizar encuestas y mantener una comunicación fluida con los candidatos.
+    </p>
 </article>
 
-<div class="container mb-4">
+<div class="container mb-4 text-center">
     <button class="ojala">
         <span><a href="index.php" class="link">Regresar</a></span>
     </button>
