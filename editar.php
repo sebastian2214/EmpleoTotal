@@ -1,23 +1,76 @@
 <?php
-include_once "conexion.php"; 
+session_start();
+include_once "conexion.php";
 
+// Verificar si existe el ID de la oferta de empleo
 if (!isset($_GET["id"])) {
     exit("¡No existe un ID especificado!");
 }
 
-$id = $_GET["id"];
+$id_oferta_empleo = $_GET["id"];
 
+// Obtener los datos de la oferta a editar
 try {
-    // Obtener los datos de la oferta de empleo para editarlos
-    $sentencia = $base_de_datos->prepare("SELECT * FROM oferta_empleo WHERE id_oferta_empleo = ?;");
-    $sentencia->execute([$id]);
+    $query = "SELECT * FROM oferta_empleo WHERE id_oferta_empleo = ?";
+    $sentencia = $base_de_datos->prepare($query);
+    $sentencia->execute([$id_oferta_empleo]);
     $oferta = $sentencia->fetch(PDO::FETCH_OBJ);
 
-    if ($oferta === false) {
-        exit("¡No existe alguna oferta con ese ID!");
+    if (!$oferta) {
+        exit("¡No existe una oferta con ese ID!");
     }
 } catch (PDOException $e) {
     exit("Error al recuperar la oferta: " . $e->getMessage());
+}
+
+// Obtener todas las subcategorías para llenar el desplegable
+$query_sub_cat = "SELECT * FROM sub_cat";
+$sentencia_sub_cat = $base_de_datos->prepare($query_sub_cat);
+$sentencia_sub_cat->execute();
+$subcategorias = $sentencia_sub_cat->fetchAll(PDO::FETCH_OBJ);
+
+// Procesar la edición del formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $titulo_emp = $_POST["titulo_emp"];
+    $descripcion = $_POST["descripcion"];
+    $requisitos = $_POST["requisitos"];
+    $ubicacion = $_POST["ubicacion"];
+    $salario = $_POST["salario"];
+    $telefono = $_POST["telefono"];
+    $correo = $_POST["correo"];
+    $sub_cat_id_sub_cat = $_POST["sub_cat_id_sub_cat"];
+    $link_test = $_POST["link_test"];
+
+    // Manejo de la imagen subida
+    $imagen = $oferta->oferta_empleocol; // Mantener la imagen actual si no se sube una nueva
+    if (isset($_FILES["oferta_empleocol"]) && $_FILES["oferta_empleocol"]["error"] == 0) {
+        $imagen = "uploads/" . $_FILES["oferta_empleocol"]["name"];
+        move_uploaded_file($_FILES["oferta_empleocol"]["tmp_name"], $imagen);
+    }
+
+    // Actualizar los datos en la base de datos
+    try {
+        $query = "UPDATE oferta_empleo SET 
+                    titulo_emp = ?, 
+                    descripcion = ?, 
+                    requisitos = ?, 
+                    ubicacion = ?, 
+                    salario = ?, 
+                    telefono = ?, 
+                    correo = ?, 
+                    sub_cat_id_sub_cat = ?, 
+                    oferta_empleocol = ?, 
+                    link_test = ? 
+                  WHERE id_oferta_empleo = ?";
+        $sentencia = $base_de_datos->prepare($query);
+        $sentencia->execute([$titulo_emp, $descripcion, $requisitos, $ubicacion, $salario, $telefono, $correo, $sub_cat_id_sub_cat, $imagen, $link_test, $id_oferta_empleo]);
+
+        // Redirigir al archivo mostrar_datos.php después de actualizar
+        header("Location: mostrar_datos.php");
+        exit(); // Asegurarse de que no se siga ejecutando el script después de la redirección
+    } catch (PDOException $e) {
+        exit("Error al actualizar la oferta: " . $e->getMessage());
+    }
 }
 ?>
 
@@ -33,65 +86,123 @@ try {
 <body>
     <div class="container">
         <h2 class="my-4">Editar Oferta de Empleo</h2>
-        <form method="post" action="guardarDatosEditados.php" enctype="multipart/form-data">
+        <form method="POST" action="editar.php?id=<?php echo $oferta->id_oferta_empleo; ?>" enctype="multipart/form-data">
             <input type="hidden" name="id_oferta_empleo" value="<?php echo $oferta->id_oferta_empleo; ?>">
 
             <div class="mb-3">
                 <label for="titulo_emp" class="form-label">Título:</label>
-                <input type="text" class="form-control" name="titulo_emp" value="<?php echo $oferta->titulo_emp; ?>" required>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    name="titulo_emp" 
+                    value="<?php echo htmlspecialchars($oferta->titulo_emp); ?>" 
+                    required 
+                    pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" 
+                    title="Solo se permiten letras y espacios">
             </div>
 
             <div class="mb-3">
                 <label for="descripcion" class="form-label">Descripción:</label>
-                <textarea class="form-control" name="descripcion" required><?php echo $oferta->descripcion; ?></textarea>
+                <textarea 
+                    class="form-control" 
+                    name="descripcion" 
+                    required 
+                    pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" 
+                    title="Solo se permiten letras y espacios"><?php echo htmlspecialchars($oferta->descripcion); ?></textarea>
             </div>
 
             <div class="mb-3">
                 <label for="requisitos" class="form-label">Requisitos:</label>
-                <textarea class="form-control" name="requisitos" required><?php echo $oferta->requisitos; ?></textarea>
+                <textarea 
+                    class="form-control" 
+                    name="requisitos" 
+                    required 
+                    pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" 
+                    title="Solo se permiten letras y espacios"><?php echo htmlspecialchars($oferta->requisitos); ?></textarea>
             </div>
 
             <div class="mb-3">
                 <label for="ubicacion" class="form-label">Ubicación:</label>
-                <input type="text" class="form-control" name="ubicacion" value="<?php echo $oferta->ubicacion; ?>" required>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    name="ubicacion" 
+                    value="<?php echo htmlspecialchars($oferta->ubicacion); ?>" 
+                    required 
+                    title="Solo se permiten letras y espacios">
             </div>
 
             <div class="mb-3">
                 <label for="salario" class="form-label">Salario:</label>
-                <input type="number" class="form-control" name="salario" value="<?php echo $oferta->salario; ?>" required>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    name="salario" 
+                    value="<?php echo htmlspecialchars($oferta->salario); ?>" 
+                    required>
             </div>
 
-            <!-- Mostrar la imagen actual si existe -->
+            <div class="mb-3">
+                <label for="link_test" class="form-label">Enlace al Test:</label>
+                <input 
+                    type="url" 
+                    class="form-control" 
+                    name="link_test" 
+                    value="<?php echo htmlspecialchars($oferta->link_test); ?>" 
+                    required>
+            </div>
+
             <div class="mb-3">
                 <label for="oferta_empleocol" class="form-label">Imagen actual:</label><br>
                 <?php if (!empty($oferta->oferta_empleocol)): ?>
-                    <img src="<?php echo $oferta->oferta_empleocol; ?>" alt="Imagen actual" style="max-width: 200px;">
+                    <img src="<?php echo htmlspecialchars($oferta->oferta_empleocol); ?>" alt="Imagen actual" style="max-width: 200px;">
                 <?php else: ?>
                     <p>No hay imagen disponible</p>
                 <?php endif; ?>
             </div>
 
-            <!-- Permitir subir una nueva imagen -->
             <div class="mb-3">
                 <label for="oferta_empleocol" class="form-label">Cambiar imagen (opcional):</label>
-                <input type="file" class="form-control" id="oferta_empleocol" name="oferta_empleocol" accept="image/*">
+                <input 
+                    type="file" 
+                    class="form-control" 
+                    id="oferta_empleocol" 
+                    name="oferta_empleocol" 
+                    accept="image/*">
             </div>
 
             <div class="mb-3">
                 <label for="telefono" class="form-label">Teléfono:</label>
-                <input type="number" class="form-control" name="telefono" value="<?php echo $oferta->telefono; ?>" required>
-            </div>
-            
-            <div class="mb-3">
-                <label for="correo" class="form-label">Correo:</label>
-                <input type="email" class="form-control" name="correo" value="<?php echo $oferta->correo; ?>" required>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    name="telefono" 
+                    value="<?php echo htmlspecialchars($oferta->telefono); ?>" 
+                    required>
             </div>
 
             <div class="mb-3">
-                <label for="sub_cat_id_sub_cat" class="form-label">ID Subcategoría:</label>
-                <input type="number" class="form-control" name="sub_cat_id_sub_cat" value="<?php echo $oferta->sub_cat_id_sub_cat; ?>" required>
+                <label for="correo" class="form-label">Correo:</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    name="correo" 
+                    value="<?php echo htmlspecialchars($oferta->correo); ?>" 
+                    required>
             </div>
-            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+
+            <div class="mb-3">
+                <label for="sub_cat_id_sub_cat" class="form-label">Subcategoría:</label>
+                <select class="form-control" name="sub_cat_id_sub_cat" required>
+                    <?php foreach ($subcategorias as $subcat): ?>
+                        <option value="<?php echo htmlspecialchars($subcat->id_sub_cat); ?>" <?php echo ($subcat->id_sub_cat == $oferta->sub_cat_id_sub_cat) ? 'selected' : ''; ?>>
+                            <?php echo htmlspecialchars($subcat->nombre_sub_cat); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
         </form>
     </div>
 
