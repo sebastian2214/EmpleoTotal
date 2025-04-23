@@ -1,17 +1,40 @@
 <?php
 // Start session
-session_start();
+session_start(); // Iniciar sesión
 
-// Include database connection
-require 'conexion.php'; 
+require 'conexion.php';
+require_once 'vendor/autoload.php';
+use \Firebase\JWT\JWT;
 
-// Check if user is authenticated
-if (!isset($_SESSION['id_usuario'])) {
-    header('Location: Inicio_Sesion.php'); // Redirect to login page if not authenticated
-    exit;
+$key = "mi_clave_secreta"; // Clave secreta para verificar el token
+
+// Verificar si ya hay una sesión activa
+if (!isset($_SESSION['id_usuario']) && isset($_COOKIE['token'])) {
+    $jwt = $_COOKIE['token'];
+
+    try {
+        // Decodificar el token
+        $decoded = JWT::decode($jwt, new \Firebase\JWT\Key($key, 'HS256'));
+        $decoded_array = (array) $decoded;
+
+        // Restaurar datos del usuario en la sesión
+        $_SESSION['id_usuario'] = $decoded_array['user_id'];
+        $_SESSION['usuario'] = $decoded_array['usuario'];
+        $_SESSION['rol_id_rol'] = $decoded_array['rol'];
+    } catch (Exception $e) {
+        // Si el token es inválido o ha expirado, redirigir al inicio de sesión
+        header('Location: Inicio_Sesion.php');
+        exit();
+    }
 }
 
-// Get user data
+// Si no hay sesión activa ni token, redirigir al inicio de sesión
+if (!isset($_SESSION['id_usuario'])) {
+    header('Location: Inicio_Sesion.php');
+    exit();
+}
+
+// Recuperar datos del usuario
 $id_usuario = $_SESSION['id_usuario'];
 $stmt = $base_de_datos->prepare("SELECT usuario FROM usuario WHERE id_usuario = :id");
 $stmt->bindParam(':id', $id_usuario, PDO::PARAM_INT);
@@ -19,10 +42,10 @@ $stmt->execute();
 $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$usuario) {
-    echo "Usuario no encontrado.";
-    exit;
-}?>
-
+    echo "Error: Usuario no encontrado.";
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
