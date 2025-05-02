@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" modified="2024-06-26T18:01:41.985Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="tZEWQdRhTbf3viX9pjLN" version="24.6.3" type="google">
+  <diagram name="Página-1" id="Xr5Wg-avgVTjI7pvWklX">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-15" value="cliente" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="475" y="415" width="280" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="3EMoEul1gWhH2c11yXHo-1" value="EmpleoTotal" style="verticalAlign=top;align=left;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="110" width="310" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="3EMoEul1gWhH2c11yXHo-2" value="Windows server&amp;nbsp;" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="3EMoEul1gWhH2c11yXHo-1">
+          <mxGeometry width="280" height="180" relative="1" as="geometry">
+            <mxPoint x="10" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3EMoEul1gWhH2c11yXHo-5" value="Mysql" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="3EMoEul1gWhH2c11yXHo-1">
+          <mxGeometry x="30" y="80" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="3EMoEul1gWhH2c11yXHo-6" value=".sql" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="3EMoEul1gWhH2c11yXHo-1">
+          <mxGeometry x="70" y="120" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-1" value="EmpleoTotal" style="verticalAlign=top;align=left;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="470" y="100" width="310" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-2" value="Windows server&amp;nbsp;" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="EzgtpJn9lw9ix-R9xBij-1">
+          <mxGeometry width="280" height="180" relative="1" as="geometry">
+            <mxPoint x="10" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-4" value=".sql" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="EzgtpJn9lw9ix-R9xBij-1">
+          <mxGeometry x="20" y="80" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-3" value="&#39;*.class&#39;, &#39;*.html&#39;, &#39;*.css&#39;, &#39;*.xml&#39;" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="EzgtpJn9lw9ix-R9xBij-1">
+          <mxGeometry x="45" y="120" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-6" value="&#39;*.jpg&#39; &#39;*.png&#39;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EzgtpJn9lw9ix-R9xBij-1">
+          <mxGeometry x="90" y="150" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-5" value="TCP/IP 3306" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="110" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-9" value="Navegador web" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="495" y="455" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-10" value="&#39;*.html&#39;, &#39;*.css&#39;, &#39;*.java&#39;" style="verticalAlign=top;align=center;shape=cube;size=10;direction=south;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="530" y="500" width="165" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-17" value="HTTP 90 HTTPS 443" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="667" y="360" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-18" value="" style="endArrow=none;html=1;rounded=0;exitX=0.179;exitY=0.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.223;entryY=0.998;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3EMoEul1gWhH2c11yXHo-1" target="EzgtpJn9lw9ix-R9xBij-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="220" as="sourcePoint" />
+            <mxPoint x="410" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EzgtpJn9lw9ix-R9xBij-19" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0;entryDx=230;entryDy=160;entryPerimeter=0;exitX=0.011;exitY=0.509;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="EzgtpJn9lw9ix-R9xBij-15" target="EzgtpJn9lw9ix-R9xBij-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="400" as="sourcePoint" />
+            <mxPoint x="620" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
