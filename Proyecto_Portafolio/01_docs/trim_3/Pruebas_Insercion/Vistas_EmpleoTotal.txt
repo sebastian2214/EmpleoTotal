@@ -1,0 +1,73 @@
+1. Vista de calificaciones
+
+CREATE VIEW vista_calificaciones AS
+SELECT idcalificaciones, calificacion, comentario, fecha, oferta_empleo_id_oferta_empleo, usuario_id_usuario
+FROM calificaciones;
+
+2. Vista de categoria
+
+CREATE VIEW vista_categoria AS
+SELECT id_categora, nombre_cat
+FROM categoria;
+
+3. Vista de empresas
+
+CREATE VIEW vista_empresas AS
+SELECT id_empresa, nombre_emp, industria, ubicacion, tamano_emp, descripcion_emp, contacto, correo, sitio_web_of, antecedentes, mision, vision, regionales, hitos_significativos, innovaciones_recientes, beneficios_empleados, usuario_id_usuario
+FROM empresas;
+
+4. Vista de estudios
+
+CREATE VIEW vista_estudios AS
+SELECT idEstudios, intitucion, titulo, fecha_inicio, fecha_fin, hojade_de_vida_id_hojade_de_vida
+FROM estudios;
+
+5. Vista de experiencia_laboral
+
+CREATE VIEW vista_experiencia_laboral AS
+SELECT idexperiencia_laboral, empresa, cargo, ubicacion_empleo, descripcion_labor, fecha_inicio, fecha_fin, hojade_de_vida_id_hojade_de_vida
+FROM experiencia_laboral;
+
+6. Vista de hojade_de_vida
+
+CREATE VIEW vista_hojade_de_vida AS
+SELECT id_hojade_de_vida, nombre, apellido, direccion, telefono, correo, estado_civil, fecha_nacimiento, nacionalidad, descripcion_sobre_ti, objetivo_profecional, idiomas, referencias, parentezco, numero_referencia, intereses_personales, disponibilidad_trabajo, usuario_id_usuario
+FROM hojade_de_vida;
+
+7. Vista de mensajes
+
+CREATE VIEW vista_mensajes AS
+SELECT id_mensajes, id_receptor, id_interceptor, contenido, fecha_envio, visto
+FROM mensajes;
+
+8. Vista de notificaciones
+
+CREATE VIEW vista_notificaciones AS
+SELECT idnotificaciones, contenido, fecha_envio, usuario_id_usuario
+FROM notificaciones;
+
+9. Vista de oferta_empleo
+
+CREATE VIEW vista_oferta_empleo AS
+SELECT id_oferta_empleo, titulo_emp, descripcion, requisitos, ubicacion, salario, oferta_empleocol, telefono, correo, sub_cat_id_sub_cat
+FROM oferta_empleo;
+
+10. Vista de rol
+
+CREATE VIEW vista_rol AS
+SELECT id_rol, nombre_rol
+FROM rol;
+
+11. Vista de sub_cat
+
+CREATE VIEW vista_sub_cat AS
+SELECT id_sub_cat, nombre_sub_cat, categoria_id_categora
+FROM sub_cat;
+
+12. Vista de usuario
+
+CREATE VIEW vista_usuario AS
+SELECT id_usuario, usuario, correo, contrasena, rol_id_rol
+FROM usuario;
+
+

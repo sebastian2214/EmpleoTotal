@@ -1,0 +1,91 @@
+1. Tabla calificaciones
+
+INSERT INTO calificaciones (idcalificaciones, calificacion, comentario, fecha, oferta_empleo_id_oferta_empleo, usuario_id_usuario)
+VALUES (1, 3, 'Podría Mejorar', '2024-09-01', 1, 1),
+       (2, 4, 'Excelente', '2024-09-05', 2, 2),
+       (3, 2, 'Desagradable', '2024-09-10', 3, 3);
+
+
+2. Tabla categoria
+
+INSERT INTO categoria (id_categora, nombre_cat)
+VALUES (1, 'Tecnología'),
+       (2, 'Finanzas'),
+       (3, 'Recursos Humanos');
+
+
+3. Tabla empresas
+
+INSERT INTO empresas (id_empresa, nombre_emp, industria, ubicacion, tamano_emp, descripcion_emp, contacto, correo, sitio_web_of, antecedentes, mision, vision, regionales, hitos_significativos, innovaciones_recientes, beneficios_empleados, usuario_id_usuario)
+VALUES (1, 'Tech Solutions', 'Software', 'Ciudad A', '100-500', 'Empresa enfocada en soluciones tecnológicas', 'Juan Pérez', 'contacto@techsolutions.com', 'www.techsolutions.com', 'Fundada en 2000', 'Ser líderes en innovación', 'Consolidarnos en el mercado', 'Región Norte', 'Primer software patentado en 2010', 'Desarrollo de IA', 'Salario competitivo', 1),
+       (2, 'FinCorp', 'Servicios Financieros', 'Ciudad B', '50-200', 'Servicios de asesoría financiera', 'Ana Gómez', 'contacto@fincorp.com', 'www.fincorp.com', 'Fundada en 1995', 'Excelencia en servicios financieros', 'Ser reconocidos globalmente', 'Región Sur', 'Apertura de oficinas internacionales en 2015', 'Integración de blockchain', 'Planes de pensiones', 2),
+       (3, 'HealthLife', 'Salud', 'Ciudad C', '200-1000', 'Servicios médicos integrales', 'Carlos Díaz', 'contacto@healthlife.com', 'www.healthlife.com', 'Fundada en 2010', 'Cuidar la salud de las personas', 'Crecimiento regional', 'Región Este', 'Primer centro especializado en salud digital en 2018', 'Nuevas tecnologías en telemedicina', 'Bonos por rendimiento', 3);
+
+
+4. Tabla estudios
+
+INSERT INTO estudios (idEstudios, intitucion, titulo, fecha_inicio, fecha_fin, hojade_de_vida_id_hojade_de_vida)
+VALUES (1, 'Universidad A', 'Ingeniería de Sistemas', '2020-01-01', '2024-01-01', 1),
+       (2, 'Universidad B', 'Administración de Empresas', '2018-01-01', '2022-01-01', 2),
+       (3, 'Universidad C', 'Psicología', '2019-01-01', '2023-01-01', 3);
+
+
+5. Tabla experiencia_laboral
+
+INSERT INTO experiencia_laboral (idexperiencia_laboral, empresa, cargo, ubicacion_empleo, descripcion_labor, fecha_inicio, fecha_fin, hojade_de_vida_id_hojade_de_vida)
+VALUES (1, 'Tech Solutions', 'Desarrollador', 'Ciudad A', 'Desarrollo de aplicaciones web', '2022-01-01', '2023-12-31', 1),
+       (2, 'FinCorp', 'Analista Financiero', 'Ciudad B', 'Análisis de inversiones', '2020-01-01', '2023-12-31', 2),
+       (3, 'HealthLife', 'Asesor Médico', 'Ciudad C', 'Asesoría en atención médica', '2021-01-01', '2023-12-31', 3);
+
+
+6. Tabla hojade_de_vida
+
+INSERT INTO hojade_de_vida (id_hojade_de_vida, nombre, apellido, direccion, telefono, correo, estado_civil, fecha_nacimiento, nacionalidad, descripcion_sobre_ti, objetivo_profecional, idiomas, referencias, parentezco, numero_referencia, intereses_personales, disponibilidad_trabajo, usuario_id_usuario)
+VALUES (1, 'Juan', 'Pérez', 'Calle A', 1234567890, 'juan.perez@example.com', 'Soltero', '1990-01-01', 'Mexicana', 'Desarrollador con experiencia', 'Crecimiento profesional', 'Español, Inglés', 'María López', 'Amiga', '9876543210', 'Tecnología, Videojuegos', 'Inmediata', 1),
+       (2, 'Ana', 'Gómez', 'Calle B', 2345678901, 'ana.gomez@example.com', 'Casada', '1992-02-02', 'Colombiana', 'Especialista en finanzas', 'Desarrollo en finanzas internacionales', 'Español, Francés', 'Carlos Méndez', 'Compañero de trabajo', '8765432109', 'Finanzas, Viajes', 'Inmediata', 2),
+       (3, 'Carlos', 'Díaz', 'Calle C', 3456789012, 'carlos.diaz@example.com', 'Soltero', '1985-03-03', 'Argentina', 'Médico especializado', 'Aportar en el área de salud digital', 'Español, Inglés', 'Lucía Torres', 'Prima', '7654321098', 'Salud, Deportes', 'Inmediata', 3);
+
+
+7. Tabla mensajes
+
+INSERT INTO mensajes (id_mensajes, id_receptor, id_interceptor, contenido, fecha_envio, visto)
+VALUES (1, 1, 2, 'Hola, ¿cómo estás?', '2024-09-01 10:00:00', 0),
+       (2, 2, 1, 'Bien, gracias. ¿Y tú?', '2024-09-01 10:05:00', 0),
+       (3, 3, 1, '¿Podemos reunirnos mañana?', '2024-09-01 11:00:00', 0);
+
+
+8. Tabla notificaciones
+
+INSERT INTO notificaciones (idnotificaciones, contenido, fecha_envio, usuario_id_usuario)
+VALUES (1, 'Tienes una nueva oferta de empleo', '2024-09-01', 1),
+       (2, 'Tu perfil ha sido actualizado', '2024-09-02', 2),
+       (3, 'Has recibido un mensaje', '2024-09-03', 3);
+
+
+9. Tabla oferta_empleo
+
+TOCO A MANO POR LAS IMAGENES
+
+10. Tabla rol (con valores predeterminados)
+
+INSERT INTO rol (id_rol, nombre_rol)
+VALUES (1, 'Admin'),
+       (2, 'Usuario'),
+       (3, 'Empresa');
+
+11. Tabla sub_cat
+
+
+INSERT INTO sub_cat (id_sub_cat, nombre_sub_cat, categoria_id_categora)
+VALUES (1, 'Desarrollo Web', 1),
+       (2, 'Análisis Financiero', 2),
+       (3, 'Asesoría Médica', 3);
+
+
+12. Tabla usuario
+
+INSERT INTO usuario (id_usuario, usuario, correo, contrasena, rol_id_rol)
+VALUES (1, 'admin_user', 'admin@example.com', 'password_hash', 1),
+       (2, 'normal_user', 'user@example.com', 'password_hash', 2),
+       (3, 'company_user', 'company@example.com', 'password_hash', 3);
+
