@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anteriores</title>
+    <link rel="stylesheet" href="css/diablo.css">
+</head>
+<body>
+    <header class="juan">
+        <div class="pepa">
+            <img src="img/Imagen_de_WhatsApp_2024-05-19_a_las_22.13.35_0c41c9e7-removebg-preview.png" alt="">
+        </div>
+    </header>
+    <main>
+    </main>
+    <button class="ojala">
+        <span><a href="notificaciones.html" class="link">Regresar</a></span>
+    </button>
+<main></main>
+    <h2>Tabla de Entrevistas</h2>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="text" id="apellido" placeholder="Apellido">
+    <input type="number" id="edad" placeholder="Edad">
+    <input type="date" id="fecha" placeholder="Fecha de la Entrevista">
+    <button onclick="addRow()">Agregar</button>
+    <table id="interviewTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Fecha de la Entrevista</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            loadTable();
+        });
+
+        function addRow() {
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const edad = document.getElementById('edad').value;
+            const fecha = document.getElementById('fecha').value;
+
+            if (nombre && apellido && edad && fecha) {
+                const table = document.getElementById('interviewTable').getElementsByTagName('tbody')[0];
+                const newRow = table.insertRow();
+
+                const nombreCell = newRow.insertCell(0);
+                const apellidoCell = newRow.insertCell(1);
+                const edadCell = newRow.insertCell(2);
+                const fechaCell = newRow.insertCell(3);
+                const actionsCell = newRow.insertCell(4);
+
+                nombreCell.textContent = nombre;
+                apellidoCell.textContent = apellido;
+                edadCell.textContent = edad;
+                fechaCell.textContent = fecha;
+                actionsCell.innerHTML = `
+                    <button onclick="editRow(this)">Editar</button>
+                    <button onclick="deleteRow(this)">Eliminar</button>
+                `;
+
+                saveTable();
+            } else {
+                alert("Por favor, completa todos los campos.");
+            }
+        }
+
+        function deleteRow(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            saveTable();
+        }
+
+        function editRow(button) {
+            const row = button.parentNode.parentNode;
+            const nombreCell = row.cells[0];
+            const apellidoCell = row.cells[1];
+            const edadCell = row.cells[2];
+            const fechaCell = row.cells[3];
+
+            const newNombre = prompt("Editar nombre:", nombreCell.textContent);
+            const newApellido = prompt("Editar apellido:", apellidoCell.textContent);
+            const newEdad = prompt("Editar edad:", edadCell.textContent);
+            const newFecha = prompt("Editar fecha de la entrevista:", fechaCell.textContent);
+
+            if (newNombre && newApellido && newEdad && newFecha) {
+                nombreCell.textContent = newNombre;
+                apellidoCell.textContent = newApellido;
+                edadCell.textContent = newEdad;
+                fechaCell.textContent = newFecha;
+                saveTable();
+            }
+        }
+
+        function saveTable() {
+            const table = document.getElementById('interviewTable').getElementsByTagName('tbody')[0];
+            const rows = table.rows;
+            const data = [];
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].cells;
+                const row = {
+                    nombre: cells[0].textContent,
+                    apellido: cells[1].textContent,
+                    edad: cells[2].textContent,
+                    fecha: cells[3].textContent
+                };
+                data.push(row);
+            }
+
+            localStorage.setItem('tableData', JSON.stringify(data));
+        }
+
+        function loadTable() {
+            const data = JSON.parse(localStorage.getItem('tableData')) || [];
+            const table = document.getElementById('interviewTable').getElementsByTagName('tbody')[0];
+
+            for (const row of data) {
+                const newRow = table.insertRow();
+
+                const nombreCell = newRow.insertCell(0);
+                const apellidoCell = newRow.insertCell(1);
+                const edadCell = newRow.insertCell(2);
+                const fechaCell = newRow.insertCell(3);
+                const actionsCell = newRow.insertCell(4);
+
+                nombreCell.textContent = row.nombre;
+                apellidoCell.textContent = row.apellido;
+                edadCell.textContent = row.edad;
+                fechaCell.textContent = row.fecha;
+                actionsCell.innerHTML = `
+                    <button onclick="editRow(this)">Editar</button>
+                    <button onclick="deleteRow(this)">Eliminar</button>
+                `;
+            }
+        }
+    </script>
+</main>
+</body>
+</html>
