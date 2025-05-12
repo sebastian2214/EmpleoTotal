@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(./imagenes/fondo.avif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+/* Header */
+header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 180px;
+    height: auto;
+}
+/* Contenedor de éxito */
+.contenedor-exito {
+    background: rgba(135, 23, 227, 0.7); /* Fondo semitransparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Título */
+.mensaje-exito h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Mensaje */
+.mensaje-exito p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Botón de volver */
+.btn-volver input[type="button"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #8E44AD, #3498DB);
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-volver input[type="button"]:hover {
+    background: linear-gradient(45deg, #9B59B6, #2E86C1);
+    transform: scale(1.05);
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedor-exito {
+        padding: 30px;
+    }
+
+    .mensaje-exito h1 {
+        font-size: 28px;
+    }
+
+    .mensaje-exito p {
+        font-size: 16px;
+    }
+
+    .btn-volver input[type="button"] {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-exito {
+        padding: 20px;
+    }
+
+    .mensaje-exito h1 {
+        font-size: 24px;
+    }
+
+    .mensaje-exito p {
+        font-size: 14px;
+    }
+
+    .btn-volver input[type="button"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
