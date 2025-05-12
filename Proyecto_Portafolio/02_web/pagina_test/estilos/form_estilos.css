@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor general */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    max-width: 1400px; /* o más si deseas */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Estilo del formulario */
+.formulario {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Asegura que el logo se posicione dentro del formulario */
+}
+
+.logo-minimal {
+    position: absolute;
+    top: 10px; /* Ajusta el espacio desde la parte superior */
+    left: 10px; /* Ajusta el espacio desde la parte derecha */
+    z-index: 10; /* Asegura que el logo esté sobre el contenido */
+}
+
+.logo-minimal img {
+    height: 100px; /* Ajusta el tamaño del logo */
+}
+
+/* Estilo del título */
+.formulario h2 {
+    color: #6C3483;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6C3483;
+    outline: none;
+}
+
+/* Estilo del botón */
+.btn-agregar {
+    background-color: #6C3483;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #512e5f;
+}
