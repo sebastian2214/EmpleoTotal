@@ -1,0 +1,238 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #000000 0%, #510cd0 100%);
+    padding: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background-color: #ff66cc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #ff33aa;
+    transform: translateY(-2px);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.search-container {
+    margin: 120px auto 20px; /* Ajusta el margen para no cubrir el contenido */
+    max-width: 600px;
+    padding: 0 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input::placeholder {
+    color: #888;
+}
+
+.search-container button {
+    background-color: #510cd0;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #3e09b1;
+}
+
+.job-list {
+    margin-top: 20px; /* Espacio debajo del header */
+    padding: 20px;
+}
+
+.job-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.location-badge {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #510cd0; /* Morado para el fondo */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.job-description {
+    font-size: 16px;
+    color: #6800f9;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #7600e4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5100c2;
+}
+
+.btn-pink {
+    background-color: #ff66cc;
+    color: white;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-pink:hover {
+    background-color: #ff33aa;
+    transform: translateY(-2px);
+}
+
+.btn-pink:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn {
+    background-color: #510cd0;
+    color: #e6f0fa;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .search-container {
+        margin: 120px auto 20px;
+    }
+
+    .nav-buttons {
+        gap: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .search-container {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .search-container input {
+        width: calc(100% - 2rem);
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-btn {
+        margin-bottom: 1rem;
+    }
+
+    .job-card {
+        padding: 15px;
+    }
+
+    .job-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

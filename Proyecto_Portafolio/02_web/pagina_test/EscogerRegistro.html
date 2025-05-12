@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escoger Registro</title>
+    <link rel="stylesheet" href="EscogerRegistro.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="imagenes/logoTotal.png" alt="Logo de la empresa">
+    </header>
+    <main class="escoger">
+        <h1>Cómo Registrarse</h1>
+        <nav class="botones">
+            <a href="Registro_Usuario.php"><button class="usuario">Usuario</button></a>
+            <a href="Registro_Empresa.php"><button class="empresa">Empresa</button></a>
+        </nav>
+    </main>
+</body>
+</html>
