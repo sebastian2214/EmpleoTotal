@@ -1,0 +1,656 @@
+/* Estilos generales (Desktop) */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e1dddd;
+}
+
+:root {
+    --primary-color: #5600c5;
+    --background-color: #f9f5f0;
+    --dark-color: #151515;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #000000 0%, #4d07ff 100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    top: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.start-100 {
+    right: 0;
+}
+
+.translate-middle {
+    transform: translate(50%, -50%);
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.5em 0.75em;
+    font-size: 0.75em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+ .user-icon-btn {
+            background-color: black; /* Color de fondo del botón */
+            color: white; /* Color del ícono */
+            border: none; /* Sin borde */
+            padding: 2px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cursor en forma de mano al pasar sobre el botón */
+            font-size: 25px; /* Tamaño del ícono */
+            transition: background-color 0.3s ease; /* Efecto de transición para el color de fondo */
+        }
+
+        .user-icon-btn:hover {
+            background-color: #333; /* Color de fondo al pasar el ratón sobre el botón */
+        }
+
+        .user-icon {
+            color: white; /* Color del ícono */
+        }
+.btn-lila{
+    color: white;
+    background-color: #b600ce;
+}
+.input-group {
+    max-width: 500px; /* Ajusta el ancho máximo de la barra de búsqueda */
+    margin-top: 23px; /* Centra la barra de búsqueda en la página */
+    text-align: center;
+}
+
+.input-group .form-control {
+    height: 40px; /* Altura de la barra de búsqueda */
+    border-radius: 20px; /* Bordes redondeados */
+    border: 1px solid #6a0dad; /* Color del borde */
+    padding: 0 15px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+.input-group .btn {
+    height: 40px; /* Altura del botón */
+    border-radius: 20px; /* Bordes redondeados */
+    margin-left: -5px; /* Ajuste del espacio entre la barra y el botón */
+}
+
+.input-group .btn:hover {
+    background-color: #4b0082; /* Color al pasar el mouse */
+}
+
+/* Banner */
+.banner {
+    background-image: linear-gradient(100deg, #000000, #00000020),
+    url('./imagenes/grupodetrabajo-principal.jpg');
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-banner {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+}
+
+.content-banner p {
+    color: silver;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.content-banner h2 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content-banner a {
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a, .btn-inicio-sesion {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover, .btn-inicio-sesion:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.btn-inicio-sesion {
+    background-color: #5f0fbd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Categories */
+.top-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.container-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.card-category {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 2rem;
+}
+
+.category-moca {
+    background-image: linear-gradient(#00000080, #00000080),
+    url('./imagenes/ing.jfif');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.category-capuchino {
+    background-image: linear-gradient(#00000080, #00000080),
+    url('./imagenes/trans.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-expreso {
+    background-image: linear-gradient(#00000080, #00000080),
+    url('./imagenes/cont.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-category p {
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.card-category p::after {
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.card-category span {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-category span:hover {
+    color: var(--primary-color);
+}
+
+/* Dropdown */
+.search-menu {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.search-form {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #510cd0;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ver-mas:hover {
+    background-color: #3c0a9c;
+    transform: translateY(-2px);
+}
+
+.btn-ver-mas:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.dropdown {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dropdown-select {
+    padding: 10px;
+    border: 1px solid #6a11cb;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #6a11cb;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.dropdown-select:hover {
+    border-color: #521095;
+}
+
+
+
+/* Estilo general del contenedor */
+.container {
+    padding: 0 15px; /* Asegura espaciado interno adecuado */
+}
+
+/* Asegura el centrado horizontal y espaciado en la fila */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si hay más de una fila */
+    justify-content: center; /* Centra horizontalmente las tarjetas dentro de la fila */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Ajuste para las columnas */
+.col-lg-4,
+.col-md-6 {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas dentro de la columna */
+    margin-bottom: 30px; /* Espaciado entre filas de tarjetas */
+}
+
+/* Estilo para las tarjetas */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Asegura que la tarjeta ocupe todo el ancho de su columna */
+}
+
+/* Escala y sombra de la tarjeta al pasar el ratón */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajusta la imagen dentro de la tarjeta */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+}
+
+/* Espaciado interno de la tarjeta */
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Tamaño del título de la tarjeta */
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Tamaño del texto de la tarjeta */
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo del botón */
+.btn-primary {
+    background-color: #510cd0;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efecto hover del botón */
+.btn-primary:hover {
+    background-color: #3c0a9c;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+    .col-lg-4 {
+        flex: 1 1 45%; /* Ajusta el tamaño de las columnas en pantallas medianas */
+        max-width: 45%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .col-lg-4,
+    .col-md-6 {
+        flex: 1 1 100%; /* Hace que las columnas ocupen el 100% del ancho en pantallas más pequeñas */
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container-categories {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner {
+        height: 30rem;
+        padding: 15rem 0;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-icons {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .user-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .content-banner {
+        padding: 10rem 0;
+    }
+
+    .content-banner h2 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .banner {
+        height: 20rem;
+    }
+
+    .btn-vista-empresa {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .btn-linda {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .sidebar a, .btn-inicio-sesion {
+        font-size: 16px;
+    }
+}
+.container {
+    max-width: 1140px; /* Ajusta según el tamaño deseado */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 400px; /* Aumenta la altura mínima para las tarjetas */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 300px; /* Altura fija para las imágenes */
+    width: 100%; /* Ancho completo del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+
+.card-body {
+    padding: 20px; /* Aumenta el relleno del cuerpo de la tarjeta */
+    flex: 1;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto del título */
+    margin-bottom: 0.75rem;
+    white-space: normal; /* Permite que el texto se ajuste a múltiples líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+}
+
+.card-text {
+    font-size: 1rem; /* Mantiene el tamaño del texto del cuerpo */
+    margin-bottom: 1rem;
+    white-space: normal; /* Permite que el texto se ajuste a múltiples líneas */
+}
+
+.btn-primary {
+    background-color: #6a0dad;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4b0082;
+}
+
+/* Estilo para centrar tarjetas en una fila */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.col-lg-4, .col-md-6 {
+    padding: 15px;
+    /* Añade un margen para que las tarjetas no estén pegadas entre sí */
+    margin-bottom: 15px;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #6a0dad;
+}
+
+.user-icons .btn-lila {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    margin: 0 5px;
+}
+
+.user-icons .btn-lila:hover {
+    background-color: #4b0082;
+}
+.ofertas-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+gap: 15px; /* Espacio entre las tarjetas */
+padding: 20px; /* Espaciado alrededor del contenedor */
+}
+
+.card {
+background-color: #fff; /* Fondo blanco para las tarjetas */
+border: 1px solid #ddd; /* Bordes suaves */
+border-radius: 5px; /* Esquinas redondeadas */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+transition: transform 0.2s; /* Transición suave para el hover */
+}
+
+.card:hover {
+transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+.btn-primary {
+    background-color: #6f42c1 !important; 
+    border-color: #6f42c1 !important; 
+}
