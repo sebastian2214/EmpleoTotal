@@ -1,0 +1,107 @@
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: linear-gradient(
+        90deg,
+        rgb(17, 17, 17)90%,
+        rgb(43, 32, 75) 10%
+    );
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #6A1B9A;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.user-icon-container {
+    position: absolute;
+    top: 35px;
+    right: 150px;
+}
+
+.burger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    transition: 300ms;
+    border-radius: 10px;
+  }
+  .burger input[type="checkbox"] {
+    appearance: none;
+    transition: 300ms;
+  }
+  
+  .burger::before,
+  .burger::after {
+    content: "";
+    transition: 300ms;
+    transform-origin: center center;
+  }
+  
+  .burger::before {
+    transform: translateY(8px);
+  }
+  .burger::after {
+    transform: translateY(-8px);
+  }
+  .burger .line,
+  .burger::before,
+  .burger::after {
+    width: 25px;
+    height: 2.1px;
+    display: block;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+  }
+  
+  .burger:has(.line:checked)::before {
+    animation: animation1 400ms ease-out 0s 1 both;
+  }
+  .burger:has(.line:checked)::after {
+    animation: animation2 400ms ease-out 0s 1 both;
+  }
+  
+  .burger:hover {
+    background: #2e136e;
+    border-radius: 50%;
+  }
+  
+  .burger:hover .line,
+  .burger:hover::before,
+  .burger:hover::after {
+    background: #e8e8e8;
+  }
+
+
+ 
+  
