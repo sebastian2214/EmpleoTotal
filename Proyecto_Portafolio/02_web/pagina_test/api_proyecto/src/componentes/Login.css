@@ -1,0 +1,130 @@
+/* Configuración global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', sans-serif;
+    background: linear-gradient(150deg, black, #6C3483, black);
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('./imagenes/fondo_login.webp') no-repeat center center;
+    background-size: cover;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear a la izquierda */
+    background-color: rgba(255, 228, 235, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Título */
+h1 {
+    align-self: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Contenedor de inputs */
+.input-container {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Etiqueta flotante */
+.form__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: black;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Evita que la etiqueta interfiera con el clic */
+}
+
+/* Estilo del input */
+.datos {
+    font-family: helvetica;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: 0;
+    font-size: 17px;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+
+/* Efectos al enfocar */
+.datos:focus {
+    border-color: purple;
+}
+
+.datos:focus ~ .form__label,
+.datos:not(:placeholder-shown) ~ .form__label {
+    top: -10px; /* Subir la etiqueta */
+    left: 10px;
+    font-size: 14px;
+    color: purple;
+}
+
+/* Botón */
+button {
+    padding: 10px 80px;
+    color: white;
+    background-color: #6C3483; /* Color morado */
+    border: none;
+    border-radius: 50px; /* Esquinas redondeadas estilo óvalo */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+    align-self: center; /* Asegura que el botón esté centrado */
+}
+
+/* Efecto hover */
+button:hover {
+    background-color: #8A50A3; /* Morado más claro al pasar el mouse */
+}
+
+
+/* Enlace para registrarse */
+.registrar a {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.registrar a:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje */
+p {
+    color: red;
+    margin-top: 10px;
+}
