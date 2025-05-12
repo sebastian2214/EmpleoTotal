@@ -1,0 +1,402 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: blue;
+    line-height: 1.6;
+   
+}
+
+.inicio-header {
+    background: linear-gradient(150deg, black, #6C3483, black);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.container {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-lila {
+    background-color: #ffffff;
+    color: #6a11cb;
+    border: 2px solid #6a11cb;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-lila:hover {
+    background-color: #6a11cb;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.user-icon {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+
+/* Sidebar ---------------------------------------------------------------------------Menu*/
+
+
+/* Sidebar */
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.user-icon {
+    font-size: 24px;
+    color: black;
+}
+
+.user-icon-container {
+    position: relative;
+}
+
+.user-icon-btn {
+    background-color: #6C3483;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-icon {
+    font-size: 24px;
+}
+
+
+/* diseño hoja de vida ---------------------------------------------------------------------------Menu*/
+
+#hoja_de_vida .archivo {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+
+/* diseño graficas ---------------------------------------------------------------------------Menu*/
+
+#myChart {
+    width: 400px;
+    height: 200px;
+}
+
+section#graficas {
+    width: 50%;
+    height: 300px;
+}
+
+#graficas {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.page-grafica {
+    display: none;
+    padding: 10px;
+    background-color: #b34343;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+/* diseño comentarios ---------------------------------------------------------------------------Menu*/
+
+.comentarios-container {
+    margin-top: 20px;
+}
+
+.comentario {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.comentario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nombre-usuario {
+    font-weight: bold;
+}
+
+.calificacion {
+    color: #ffc107; /* Amarillo para las estrellas */
+}
+
+.comentario-texto {
+    margin-bottom: 10px;
+}
+
+.comentario-acciones {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-eliminar,
+.btn-censurar {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.btn-eliminar:hover,
+.btn-censurar:hover {
+    background-color: #d32f2f;
+}
+
+/* codigo de tablas de añadir, editar */
+
+
+
+/* Modal de contenido en editar-------------------------------------------------------------- */
+
+
+        /* Estilos para el header de la ventana emergente */
+        .header-ventanas-emergentes {
+            padding: 15px;
+            
+            color: white; /* Color del texto */
+            border-bottom: 2px solid #0056b3; /* Línea inferior azul oscuro */
+            text-align: center; /* Centramos el texto */
+            font-size: 1.5em; /* Tamaño de fuente del título */
+            border-top-left-radius: 8px; /* Bordes redondeados en la parte superior izquierda */
+            border-top-right-radius: 8px; /* Bordes redondeados en la parte superior derecha */
+            background-image: url("IMAGENES/imagen.jpg");
+        }
+          
+          .header-ventanas-emergentes h2 {
+            margin: 0;
+            font-weight: 600; /* Peso de la fuente */
+          }
+
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+        .agregar {
+            background-color: #5818be; /* Fondo morado */
+            color: white; /* Texto blanco */
+            border: none; /* Sin borde */
+            padding: 10px 20px; /* Espaciado interno */
+            font-size: 16px; /* Tamaño de fuente */
+            cursor: pointer; /* Cursor de puntero */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s ease; /* Transición suave para el fondo */
+        }
+  
+        .agregar:hover {
+            background-color: #5818be; /* Fondo morado oscuro al pasar el ratón */
+        }
+   
+  
+        /* Estilos para el modal */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Posición fija */
+            z-index: 1; /* Por encima de otros elementos */
+            left: 0;
+            top: 0;
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Altura completa */
+            overflow: auto; /* Habilitar desplazamiento si es necesario */
+            background-color: rgba(0,0,0,0.5); /* Fondo semi-transparente */
+        }
+  
+        .modal-content {
+            background-color: #fefefe; /* Fondo blanco */
+            margin: 15% auto; /* Centrar vertical y horizontalmente */
+            padding: 20px; /* Relleno interno */
+            border: 1px solid #888; /* Borde gris */
+            width: 80%; /* Ancho del 80% */
+            max-width: 600px; /* Máximo ancho */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra */
+        }
+  
+        .close {
+            color: #aaa; /* Color gris */
+            float: right; /* Alinear a la derecha */
+            font-size: 28px; /* Tamaño de fuente */
+            font-weight: bold; /* Negrita */
+        }
+  
+        .close:hover,
+        .close:focus {
+            color: #000; /* Color negro al pasar el ratón o enfocar */
+            text-decoration: none; /* Sin subrayado */
+            cursor: pointer; /* Cursor de puntero */
+        }
+  
+        h2 {
+            margin-top: 0; /* Sin margen superior */
+        }
+  
+        form {
+            display: flex;
+            flex-direction: column; /* Elementos en columna */
+        }
+  
+        input[type="text"], input[type="hidden"] {
+            padding: 10px; /* Relleno interno */
+            margin: 10px 0; /* Margen vertical */
+            border: 1px solid #ccc; /* Borde gris */
+            border-radius: 5px; /* Bordes redondeados */
+            font-size: 16px; /* Tamaño de fuente */
+        }
+
+
+
+
+
+
+
+
+
+
+
+ /* interfaz de inicio--------------------------------------------------------------------------------------------------*/
+
+         /* Estilos para la sección de inicio */
+/* Estilos para la sección de inicio */
